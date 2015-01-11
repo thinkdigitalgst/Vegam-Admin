@@ -9,8 +9,6 @@ function loadSchoolFromParse(){
                         results.forEach(function(user) {
                             userSelect.options[userSelect.options.length] = new Option(user.get('username'), user.get('username'));
                             console.log(user.get('username'));
-							studentRetrieval();
-                            display();
                         });
                     }, error: function(error) {
                     }
@@ -23,7 +21,7 @@ function loadSchoolFromParse(){
                 });
 
             }
-
+/*
 function studentRetrieval(){
 	var studClass = Parse.Object.extend("Student");
 	var query = new Parse.Query(studClass);
@@ -41,7 +39,7 @@ function studentRetrieval(){
   }
 });
 }			
-			
+*/			
 function display(){
 				var User = Parse.Object.extend("User");
 				var query = new Parse.Query(User);
